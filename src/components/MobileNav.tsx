@@ -15,10 +15,13 @@ const sections = [
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
 
-  const scrollTo = (id: string) => {
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
     setOpen(false);
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      // Also update URL without strict jump
+      window.history.pushState(null, "", `#${id}`);
     }, 100);
   };
 
@@ -46,13 +49,14 @@ const MobileNav = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {sections.map(({ id, label }) => (
-              <button
+              <a
                 key={id}
-                onClick={() => scrollTo(id)}
+                href={`#${id}`}
+                onClick={(e) => scrollTo(e, id)}
                 className="block w-full text-left px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
               >
                 {label}
-              </button>
+              </a>
             ))}
           </nav>
         </div>

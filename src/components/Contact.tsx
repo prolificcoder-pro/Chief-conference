@@ -77,7 +77,7 @@ const Contact = () => (
             Abstracts and manuscripts are submitted via Google Form.
           </p>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSceTZEa3ZPAl0AL6dIFhMPbnqSrd0DoasiokJCjkBMGrzSrIw/viewform?usp=sharing&ouid=106040740252824244633"
+            href="https://forms.gle/GWLPS2uycepcQnnCA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block gold-gradient text-accent-foreground font-semibold px-8 py-3 rounded-full hover:opacity-90 transition-opacity shadow-lg"

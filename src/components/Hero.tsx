@@ -148,7 +148,7 @@ const Hero = () => {
         <motion.div className="mt-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSceTZEa3ZPAl0AL6dIFhMPbnqSrd0DoasiokJCjkBMGrzSrIw/viewform?usp=sharing&ouid=106040740252824244633" target="_blank" rel="noopener noreferrer" className="inline-block gold-gradient text-accent-foreground font-semibold px-8 py-3 rounded-full text-lg hover:opacity-90 transition-opacity shadow-lg">
+            <a href="https://forms.gle/GWLPS2uycepcQnnCA" target="_blank" rel="noopener noreferrer" className="inline-block gold-gradient text-accent-foreground font-semibold px-8 py-3 rounded-full text-lg hover:opacity-90 transition-opacity shadow-lg">
               Submit Abstract
             </a>
             <a href="#registration" className="inline-block border-2 border-accent text-accent font-semibold px-8 py-3 rounded-full text-lg hover:bg-accent/10 transition-colors">

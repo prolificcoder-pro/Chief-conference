@@ -39,7 +39,7 @@ const OnsiteNotice = () => {
                 In-Person Event
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Please note that this is a fully onsite conference taking place in Rabat, Morocco. There will be no virtual or online participation format.
+                Please note that this is a fully onsite conference taking place in Rabat, Morocco.
               </p>
             </div>
 

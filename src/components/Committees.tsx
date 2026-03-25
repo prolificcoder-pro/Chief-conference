@@ -70,7 +70,7 @@ const Committees = () => {
   const [tab, setTab] = useState<Tab>("scientific");
 
   return (
-    <section className="py-20 md:py-28 section-alt">
+    <section id="committees" className="py-20 md:py-28 section-alt">
       <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
           className="text-center mb-12"
