@@ -1,4 +1,5 @@
 import RabatSlider from "@/components/RabatSlider";
+import FacebookMockup from "@/components/FacebookMockup";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import KeynoteSpeaker from "@/components/KeynoteSpeaker";
@@ -29,6 +30,7 @@ const Index = () => (
     <Committees />
     <Contact />
     <Partners />
+    <FacebookMockup />
     <MapSection />
     <Footer />
     <WhatsAppButton />
