@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LinkedIn – IALETTL ENS Rabat</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f3f2ef; color: #191919; font-size: 14px; }
+
+  /* ── Banner ── */
+  .banner {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #0a3d6b 0%, #1565c0 40%, #0288d1 70%, #4fc3f7 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .banner-text {
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    padding: 0 14px 14px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: 8px;
+  }
+
+  /* ── Logo ── */
+  .logo-wrap {
+    position: relative;
+    top: -28px;
+    margin-bottom: -14px;
+  }
+  .logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: linear-gradient(135deg, #0a3d6b, #1976d2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .logo svg { width: 30px; height: 30px; }
+
+  .company-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #191919;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+  .company-sub {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+  }
+  .followers {
+    font-size: 11px;
+    color: #666;
+    margin-top: 4px;
+  }
+  .followers span { color: #0a66c2; font-weight: 600; }
+
+  .btn-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 6px 16px;
+    border: 1.5px solid #0a66c2;
+    border-radius: 20px;
+    color: #0a66c2;
+    font-size: 13px;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-follow:hover { background: #e8f0fe; }
+
+  /* ── About ── */
+  .section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #191919;
+  }
+  .section p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* ── Posts ── */
+  .post {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px 6px;
+  }
+  .post-avatar {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #0a3d6b, #1976d2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .post-avatar svg { width: 16px; height: 16px; }
+  .post-meta { flex: 1; }
+  .post-meta .name { font-size: 12px; font-weight: 700; color: #191919; }
+  .post-meta .time { font-size: 10px; color: #888; }
+  .post-body { padding: 0 12px 8px; font-size: 12px; color: #333; line-height: 1.5; }
+  .post-img {
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .post-actions {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid #eee;
+    padding: 4px 0 2px;
+  }
+  .post-action {
+    flex: 1;
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    padding: 4px 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .post-action:hover { color: #0a66c2; background: #f0f6ff; border-radius: 4px; }
+
+  /* ── Info rows ── */
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #555;
+  }
+  .info-row svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; fill: #666; }
+  .info-label { font-weight: 600; color: #333; display: block; margin-bottom: 1px; }
+
+  .li-logo { display:flex; align-items:center; gap:4px; padding: 10px 14px 8px; background:#fff; border-bottom: 1px solid #eee; }
+  .li-logo span { font-size:14px; font-weight:700; color:#0a66c2; letter-spacing: -0.5px; }
+
+  .visit-btn-wrap { text-align: center; padding: 6px 14px 14px; }
+  .visit-btn {
+    display: inline-block;
+    background: #0a66c2;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- LinkedIn top bar -->
+<div class="li-logo">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  <span>LinkedIn</span>
+</div>
+
+<!-- Banner -->
+<div class="banner">
+  <div class="banner-text">ENS Rabat · Applied Linguistics</div>
+</div>
+
+<!-- Profile card -->
+<div class="card">
+  <div class="logo-wrap">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  <div class="company-name">International Conference on Applied Linguistics & ELT</div>
+  <div class="company-sub">ENS Rabat · Education · Conference</div>
+  <div class="followers"><span>1,240</span> followers · <span>180</span> employees</div>
+  <a class="btn-follow" href="https://www.linkedin.com/company/international-conference-on-applied-linguistics-and-english-language-teaching-learning-ens-rabat" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#0a66c2"><path d="M12 5v14M5 12h14"/></svg>
+    Follow
+  </a>
+</div>
+
+<!-- About -->
+<div class="section">
+  <h3>About</h3>
+  <p>The International Conference on Applied Linguistics and English Language Teaching & Learning is hosted by ENS Rabat. It brings together researchers, academics, and practitioners to explore current issues in language learning, teaching methodologies, and applied linguistics research.</p>
+</div>
+
+<!-- Info -->
+<div class="section">
+  <h3>Overview</h3>
+  <div class="info-row">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    <div><span class="info-label">Location</span>ENS Rabat, Morocco</div>
+  </div>
+  <div class="info-row">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+    <div><span class="info-label">Industry</span>Higher Education &amp; Research</div>
+  </div>
+  <div class="info-row">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <div><span class="info-label">Website</span>ens.ac.ma</div>
+  </div>
+</div>
+
+<!-- Post 1 -->
+<div class="post">
+  <div class="post-header">
+    <div class="post-avatar">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="post-meta">
+      <div class="name">IALETTL ENS Rabat</div>
+      <div class="time">2d ago · 🌐</div>
+    </div>
+  </div>
+  <div class="post-img">📢 CALL FOR PAPERS · Spring 2025</div>
+  <div class="post-body">
+    We are pleased to announce the <b>Call for Papers</b> for the upcoming International Conference on Applied Linguistics & ELT at ENS Rabat. Submit your abstracts before the deadline!
+  </div>
+  <div class="post-actions">
+    <div class="post-action">👍 Like</div>
+    <div class="post-action">💬 Comment</div>
+    <div class="post-action">🔄 Repost</div>
+  </div>
+</div>
+
+<!-- Post 2 -->
+<div class="post">
+  <div class="post-header">
+    <div class="post-avatar">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="post-meta">
+      <div class="name">IALETTL ENS Rabat</div>
+      <div class="time">1w ago · 🌐</div>
+    </div>
+  </div>
+  <div class="post-body">
+    🎓 We welcome submissions on themes including <b>language acquisition</b>, <b>discourse analysis</b>, <b>ESP/EAP</b>, <b>intercultural communication</b>, and <b>digital pedagogy</b>.
+  </div>
+  <div class="post-actions">
+    <div class="post-action">👍 Like</div>
+    <div class="post-action">💬 Comment</div>
+    <div class="post-action">🔄 Repost</div>
+  </div>
+</div>
+
+<!-- Visit button -->
+<div class="visit-btn-wrap">
+  <a class="visit-btn" href="https://www.linkedin.com/company/international-conference-on-applied-linguistics-and-english-language-teaching-learning-ens-rabat?trk=blended-typeahead" target="_blank">Open on LinkedIn ↗</a>
+</div>
+
+</body>
+</html>
