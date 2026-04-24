@@ -7,6 +7,7 @@ import partnerTesol from "@/assets/partner-tesol.jpeg";
 import partnerAmideast from "@/assets/partner-amideast.png";
 import partnerCalliope from "@/assets/partner-calliope.png";
 import partnerCnrst from "@/assets/partner-cnrst-logo.png";
+import partnerMwn from "@/assets/partner-mwn.png";
 
 const partners = [
   { src: ensLogo, alt: "ENS Rabat", url: "" },
@@ -15,6 +16,7 @@ const partners = [
   { src: partnerAmideast, alt: "AMIDEAST", url: "" },
   { src: partnerCalliope, alt: "Calliope", url: "" },
   { src: partnerCnrst, alt: "CNRST", url: "" },
+  { src: partnerMwn, alt: "Morocco World News", url: "https://www.moroccoworldnews.com/" },
 ];
 
 // Duplicate to ensure there is enough content to scroll through
