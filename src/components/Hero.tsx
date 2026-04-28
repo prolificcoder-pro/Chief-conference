@@ -58,7 +58,33 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full border border-white/15" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center w-full px-4">
+        <motion.div 
+          className="flex flex-col items-center justify-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="flex items-center gap-4 mb-3">
+            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-white/30"></div>
+            <span className="text-primary-foreground/70 text-[9px] sm:text-[10px] font-bold tracking-[0.4em] uppercase drop-shadow-md">
+              Official Host
+            </span>
+            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-white/30"></div>
+          </div>
+          
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-white/5 rounded-xl blur-lg group-hover:bg-white/10 transition-all duration-500" />
+            <img 
+              src="/mwn-logo.svg" 
+              alt="Morocco World News Logo" 
+              className="relative z-10 h-10 sm:h-14 w-auto object-contain rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.5)] border border-white/10 group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-6 text-center mt-16 sm:mt-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
