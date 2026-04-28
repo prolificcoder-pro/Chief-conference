@@ -1,38 +1,76 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const scientificCommittee = [
-{ name: "Prof. Abbou Abdelkader", affiliation: "Ibn Tofail University, Kenitra" },
-{ name: "Prof. Abdelouahed Laachir", affiliation: "Hassan I University, ESEFB, Settat" },
-{ name: "Prof. Abderrazzaq Bazar", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Abdesselam Ferrati", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Adil Azhar", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Ahmed Smirkou", affiliation: "Ibn Tofail University, FLLA, Kenitra" },
-{ name: "Prof. Ayoub Lotfy", affiliation: "FLHS, Hassan II University, Casablanca" },
-{ name: "Prof. Basma Mounjid", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Boutaina Guebba", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Brahim Abouyassine", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Bzioui Abdelhak", affiliation: "ENCG, Hassan I University, Settat" },
-{ name: "Prof. Elghazali Oumaima", affiliation: "INSIAS, Mohammed V University, Rabat" },
-{ name: "Prof. Fatima Zahra Boutabssil", affiliation: "Sultan Moulay Slimane University, FLSH, Beni Mellal" },
-{ name: "Prof. Hamza Salih", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Hassan Zaid", affiliation: "FLHS, Sultan Moulay Slimane University, Beni Mellal" },
-{ name: "Prof. Houmman Hachoumi", affiliation: "Ibn Tofail University, EST, Kenitra" },
-{ name: "Prof. Ikbal Zeddari", affiliation: "FLHS, Mohammed V University, Rabat" },
-{ name: "Prof. Imane Nejjar", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Islam El Kassimi", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Jilali Nakkam", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Malika Eddakhch", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Mohamed Smirkou", affiliation: "Ibn Tofail University, Kenitra" },
-{ name: "Prof. Mustapha Mourchid", affiliation: "Moulay Ismail University, ENS, Meknes" },
-{ name: "Prof. Nadri Youssef", affiliation: "FSJES, Hassan II University, Casablanca" },
-{ name: "Prof. Nourddine Amrous", affiliation: "Mohamed V University, FLSH" },
-{ name: "Prof. Samira Dlimi", affiliation: "ENS, Mohammed V University, Rabat" },
-{ name: "Prof. Youcef Hdouch", affiliation: "Ibn Tofail University, FLLA, Kenitra" },
-{ name: "Prof. Youssef Ait Kerroum", affiliation: "Cadi Ayad University, ENS, Marrakech" },
-{ name: "Prof. Youssef Baahmad", affiliation: "Mohammed V University, ENS, Rabat" },
-{ name: "Prof. Zaid Hmouri", affiliation: "Chouaib Doukkali University, ESEF, El Jadida" },
-{ name: "Prof. Zakaria Othmane", affiliation: "ENS, Sidi Mohamed Ben Abdellah University, Fes" }];
+const groupedScientificCommittee = [
+  {
+    university: "Mohammed V University, Rabat",
+    members: [
+      "Prof. Abderrazzaq Bazar (ENS)",
+      "Prof. Abdesselam Ferrati (ENS)",
+      "Prof. Adil Azhar (ENS)",
+      "Prof. Basma Mounjid (ENS)",
+      "Prof. Boutaina Guebba (ENS)",
+      "Prof. Brahim Abouyassine (ENS)",
+      "Prof. Elghazali Oumaima (INSIAS)",
+      "Prof. Hamza Salih (ENS)",
+      "Prof. Ikbal Zeddari (FLHS)",
+      "Prof. Imane Nejjar (ENS)",
+      "Prof. Islam El Kassimi (ENS)",
+      "Prof. Jilali Nakkam (ENS)",
+      "Prof. Malika Eddakhch (ENS)",
+      "Prof. Nourddine Amrous (FLSH)",
+      "Prof. Samira Dlimi (ENS)",
+      "Prof. Youssef Baahmad (ENS)",
+    ],
+  },
+  {
+    university: "Ibn Tofail University, Kenitra",
+    members: [
+      "Prof. Abbou Abdelkader",
+      "Prof. Ahmed Smirkou (FLLA)",
+      "Prof. Houmman Hachoumi (EST)",
+      "Prof. Mohamed Smirkou",
+      "Prof. Youcef Hdouch (FLLA)",
+    ],
+  },
+  {
+    university: "Hassan I University, Settat",
+    members: [
+      "Prof. Abdelouahed Laachir (ESEFB)",
+      "Prof. Bzioui Abdelhak (ENCG)",
+    ],
+  },
+  {
+    university: "Hassan II University, Casablanca",
+    members: [
+      "Prof. Ayoub Lotfy (FLHS)",
+      "Prof. Nadri Youssef (FSJES)",
+    ],
+  },
+  {
+    university: "Sultan Moulay Slimane University, Beni Mellal",
+    members: [
+      "Prof. Fatima Zahra Boutabssil (FLSH)",
+      "Prof. Hassan Zaid (FLHS)",
+    ],
+  },
+  {
+    university: "Moulay Ismail University, Meknes",
+    members: ["Prof. Mustapha Mourchid (ENS)"],
+  },
+  {
+    university: "Cadi Ayad University, Marrakech",
+    members: ["Prof. Youssef Ait Kerroum (ENS)"],
+  },
+  {
+    university: "Chouaib Doukkali University, El Jadida",
+    members: ["Prof. Zaid Hmouri (ESEF)"],
+  },
+  {
+    university: "Sidi Mohamed Ben Abdellah University, Fes",
+    members: ["Prof. Zakaria Othmane (ENS)"],
+  },
+];
 
 
 
@@ -105,70 +143,92 @@ const Committees = () => {
           </div>
         </motion.div>
 
-        {tab === "scientific" &&
-        <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}>
-
-            {scientificCommittee.map((member) =>
-          <div
-            key={member.name}
-            className="bg-card border border-border rounded-lg p-4 hover:shadow-sm transition-shadow">
-
-                <p className="font-semibold text-foreground text-sm">{member.name}</p>
-                <p className="text-muted-foreground text-xs mt-1">{member.affiliation}</p>
-              </div>
-          )}
-          </motion.div>
-        }
-
-        {tab === "organizing" &&
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-              {organizingCommittee.map((name) =>
-            <div
-              key={name}
-              className="bg-card border border-border rounded-lg p-4 hover:shadow-sm transition-shadow">
-
-                  <p className="font-semibold text-foreground text-sm">{name}</p>
-                  <p className="text-muted-foreground text-xs mt-1">
-</p>
-                </div>)}
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 mb-4">
-              <p className="text-foreground font-semibold text-sm mb-4">Doctoral Researchers Organizing Committee</p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {doctoralStudents.map((name) =>
+        {tab === "scientific" && (
+          <motion.div
+            className="columns-1 sm:columns-2 lg:columns-3 gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            {groupedScientificCommittee.map((group) => (
               <div
-                key={name}
-                className="bg-background border border-border rounded-lg p-3 hover:shadow-sm transition-shadow">
-                    <p className="font-semibold text-foreground text-sm">{name}</p>
-                    <p className="text-muted-foreground text-xs mt-1">Doctoral Candidate</p>
-                  </div>
-              )}
+                key={group.university}
+                className="bg-card border border-border/60 rounded-xl p-6 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 break-inside-avoid mb-6 inline-block w-full relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 w-full h-1 gold-gradient opacity-80 group-hover:opacity-100 transition-opacity" />
+                <h3 className="font-serif font-bold text-foreground text-lg mt-1 mb-3 leading-tight">
+                  {group.university}
+                </h3>
+                <div className="w-10 h-0.5 bg-primary/20 mb-5 group-hover:w-16 group-hover:bg-primary/40 transition-all duration-300" />
+                <ul className="space-y-3">
+                  {group.members.map((member) => (
+                    <li key={member} className="text-muted-foreground text-sm flex items-start group/item">
+                      <span className="mr-3 mt-2 w-1.5 h-1.5 rounded-full bg-primary/30 group-hover/item:bg-primary group-hover/item:scale-125 transition-all shrink-0" />
+                      <span className="group-hover/item:text-foreground transition-colors leading-relaxed">{member}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
+          </motion.div>
+        )}
+
+        {tab === "organizing" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+              {organizingCommittee.map((name) => (
+                <div
+                  key={name}
+                  className="bg-card border border-border/60 rounded-xl p-5 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-full gold-gradient opacity-60 group-hover:opacity-100 transition-opacity" />
+                  <p className="font-serif font-semibold text-foreground text-base ml-2">{name}</p>
+                  <p className="text-muted-foreground text-xs mt-1.5 ml-2">Organizing Committee</p>
+                </div>
+              ))}
             </div>
-            <div className="bg-card border border-border rounded-lg p-6">
-              <p className="text-foreground font-semibold text-sm mb-4">MA TESOL Organizing Committee</p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {tesolStudents.map((name) =>
-              <div
-                key={name}
-                className="bg-background border border-border rounded-lg p-3 hover:shadow-sm transition-shadow">
-                    <p className="font-semibold text-foreground text-sm">{name}</p>
-                    <p className="text-muted-foreground text-xs mt-1">TESOL MA</p>
-                  </div>
-              )}
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card/50 border border-border/60 rounded-2xl p-7 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl" />
+                <h3 className="font-serif text-foreground font-bold text-xl mb-2">Doctoral Researchers</h3>
+                <div className="w-12 h-0.5 bg-primary/20 mb-6" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {doctoralStudents.map((name) => (
+                    <div
+                      key={name}
+                      className="bg-background border border-border/50 rounded-lg p-4 hover:shadow-sm hover:border-primary/20 transition-all group"
+                    >
+                      <p className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{name}</p>
+                      <p className="text-muted-foreground text-xs mt-1">Doctoral Candidate</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-card/50 border border-border/60 rounded-2xl p-7 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 blur-2xl" />
+                <h3 className="font-serif text-foreground font-bold text-xl mb-2">MA TESOL Students</h3>
+                <div className="w-12 h-0.5 bg-accent/30 mb-6" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {tesolStudents.map((name) => (
+                    <div
+                      key={name}
+                      className="bg-background border border-border/50 rounded-lg p-4 hover:shadow-sm hover:border-accent/30 transition-all group"
+                    >
+                      <p className="font-semibold text-foreground text-sm group-hover:text-accent-foreground transition-colors">{name}</p>
+                      <p className="text-muted-foreground text-xs mt-1">TESOL MA</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
-        }
+        )}
       </div>
     </section>);
 
