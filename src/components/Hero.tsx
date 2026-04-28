@@ -36,7 +36,7 @@ const Hero = () => {
   const { days, hours, minutes, seconds, started } = useCountdown(CONFERENCE_DATE);
 
   return (
-    <section className="hero-bg relative flex items-center justify-center overflow-hidden py-20">
+    <section id="home" className="hero-bg relative flex items-center justify-center overflow-hidden py-20">
       {/* Solid deep navy background */}
       <div
         className="absolute inset-0 z-[1]"

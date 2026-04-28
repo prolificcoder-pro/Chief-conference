@@ -18,11 +18,21 @@ const MobileNav = () => {
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     setOpen(false);
+    
+    // Wait a brief moment for the menu to close
     setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      // Also update URL without strict jump
-      window.history.pushState(null, "", `#${id}`);
-    }, 100);
+      const element = document.getElementById(id);
+      if (element) {
+        // Calculate exact position, accounting for current scroll
+        const top = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top,
+          behavior: "smooth",
+        });
+        // Update URL hash without causing a jump
+        window.history.pushState(null, "", `#${id}`);
+      }
+    }, 10);
   };
 
   return (
