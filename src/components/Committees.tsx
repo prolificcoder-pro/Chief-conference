@@ -26,11 +26,11 @@ const groupedScientificCommittee = [
   {
     university: "Ibn Tofail University, Kenitra",
     members: [
-      "Prof. Abbou Abdelkader",
+      "Prof. Abbou Abdelkader (Professor Emeritus)",
       "Prof. Ahmed Kadiri Hassani Yamani (ESEF)",
       "Prof. Ahmed Smirkou (FLLA)",
       "Prof. Houmman Hachoumi (EST)",
-      "Prof. Mohamed Smirkou",
+      "Prof. Mohamed Smirkou (FEG)",
       "Prof. Youcef Hdouch (FLLA)",
     ],
   },
