@@ -41,12 +41,14 @@ const ParticleBackground = () => {
     };
 
     let isVisible = true;
+    let isDrawing = false;
 
     const draw = () => {
       if (!isVisible) {
-        animRef.current = requestAnimationFrame(draw);
+        isDrawing = false;
         return;
       }
+      isDrawing = true;
       
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const p of particles.current) {
@@ -66,11 +68,13 @@ const ParticleBackground = () => {
     };
 
     init();
-    draw();
 
     const observer = new IntersectionObserver(
       (entries) => {
         isVisible = entries[0].isIntersecting;
+        if (isVisible && !isDrawing) {
+          draw();
+        }
       },
       { threshold: 0 }
     );
