@@ -90,6 +90,21 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}>
 
+          <motion.div 
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="inline-flex items-center gap-4 px-6 py-2 rounded-sm border border-accent/30 bg-accent/5 backdrop-blur-sm shadow-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/80" />
+              <span className="text-accent font-body uppercase tracking-[0.25em] text-xs sm:text-sm font-medium">
+                Conference Attendance is Free
+              </span>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/80" />
+            </div>
+          </motion.div>
+
           <p className="text-primary-foreground/70 font-body uppercase tracking-[0.3em] text-sm mb-4">
             ECOLE NORMALE SUPÉRIEURE — MOHAMMED V UNIVERSITY, RABAT
           </p>

@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 
 const ImportantDates = () =>
-<section id="important-dates" className="py-20 md:py-28 section-alt">
+  <section id="important-dates" className="py-20 md:py-28 section-alt">
     <div className="container mx-auto px-6 max-w-5xl">
       <motion.div
-      className="hero-bg rounded-xl p-8 md:p-12 text-center"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}>
+        className="hero-bg rounded-xl p-8 md:p-12 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}>
 
         <div className="flex items-center justify-center gap-3 mb-8">
           <Calendar className="w-6 h-6 text-accent" />

@@ -40,7 +40,14 @@ const ParticleBackground = () => {
       }));
     };
 
+    let isVisible = true;
+
     const draw = () => {
+      if (!isVisible) {
+        animRef.current = requestAnimationFrame(draw);
+        return;
+      }
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const p of particles.current) {
         p.x += p.vx;
@@ -60,8 +67,18 @@ const ParticleBackground = () => {
 
     init();
     draw();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
+
     window.addEventListener("resize", init);
     return () => {
+      observer.disconnect();
       window.removeEventListener("resize", init);
       cancelAnimationFrame(animRef.current);
     };
