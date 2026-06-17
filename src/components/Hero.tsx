@@ -186,15 +186,24 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.div className="mt-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+        <motion.div className="mt-12 px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+          <p className="text-primary-foreground/80 font-body text-sm sm:text-base max-w-3xl mx-auto mb-8 leading-relaxed">
+            Abstract submissions are now closed. Accepted presenters may submit their final presentation materials, while attendees may obtain a Conference Participation Pass for networking breaks and an attendance certificate.
+          </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://forms.gle/GWLPS2uycepcQnnCA" target="_blank" rel="noopener noreferrer" className="inline-block gold-gradient text-accent-foreground font-semibold px-8 py-3 rounded-full text-lg hover:opacity-90 transition-opacity shadow-lg">
-              Submit Abstract
-            </a>
-            <a href="#registration" className="inline-block border-2 border-accent text-accent font-semibold px-8 py-3 rounded-full text-lg hover:bg-accent/10 transition-colors">
-              Register
-            </a>
+          <div className="flex flex-col sm:flex-row items-start justify-center gap-8 sm:gap-4">
+            <div className="flex flex-col items-center gap-2">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScYfeDo02bjuecbCFPPPpwaPqAU91ETJwJEAZ5o0NJWeDJCqw/viewform" target="_blank" rel="noopener noreferrer" className="inline-block gold-gradient text-accent-foreground font-semibold px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:opacity-90 transition-opacity shadow-lg text-center">
+                Submit Final Presentation
+              </a>
+              <span className="text-primary-foreground/60 text-xs font-body italic text-center">For accepted presenters only</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <a href="https://forms.gle/CHWu6Zx8R3teRpEM7" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-accent text-accent font-semibold px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:bg-accent/10 transition-colors text-center">
+                Conference Attendance Pass
+              </a>
+              <span className="text-primary-foreground/60 text-xs font-body italic text-center">Paid option for attendees</span>
+            </div>
           </div>
         </motion.div>
 
