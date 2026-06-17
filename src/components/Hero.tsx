@@ -191,15 +191,15 @@ const Hero = () => {
             Abstract submissions are now closed. Accepted presenters may submit their final presentation materials, while attendees may obtain a Conference Participation Pass for networking breaks and an attendance certificate.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start justify-center gap-8 sm:gap-4">
-            <div className="flex flex-col items-center gap-2">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScYfeDo02bjuecbCFPPPpwaPqAU91ETJwJEAZ5o0NJWeDJCqw/viewform" target="_blank" rel="noopener noreferrer" className="inline-block gold-gradient text-accent-foreground font-semibold px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:opacity-90 transition-opacity shadow-lg text-center">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6 sm:gap-6 w-full max-w-3xl mx-auto">
+            <div className="flex flex-col items-center gap-2 w-full sm:w-[280px]">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScYfeDo02bjuecbCFPPPpwaPqAU91ETJwJEAZ5o0NJWeDJCqw/viewform" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full gold-gradient text-accent-foreground font-semibold px-4 py-3 rounded-full text-base hover:opacity-90 transition-opacity shadow-lg text-center min-h-[56px] leading-snug">
                 Submit Final Presentation
               </a>
               <span className="text-primary-foreground/60 text-xs font-body italic text-center">For accepted presenters only</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <a href="https://forms.gle/CHWu6Zx8R3teRpEM7" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-accent text-accent font-semibold px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:bg-accent/10 transition-colors text-center">
+            <div className="flex flex-col items-center gap-2 w-full sm:w-[280px]">
+              <a href="https://forms.gle/CHWu6Zx8R3teRpEM7" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full border-2 border-accent text-accent font-semibold px-4 py-3 rounded-full text-base hover:bg-accent/10 transition-colors text-center min-h-[56px] leading-snug">
                 Conference Attendance Pass
               </a>
               <span className="text-primary-foreground/60 text-xs font-body italic text-center">Paid option for attendees</span>
