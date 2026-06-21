@@ -144,6 +144,15 @@ const KeynoteSpeaker = () => (
               <SpeakerCard key={speaker.name} {...speaker} />
             ))}
           </div>
+
+          {/* Featured Speakers Title */}
+          <div className="w-full flex flex-col items-center pt-4 md:pt-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+              Featured Speakers
+            </h2>
+            <div className="w-16 h-1 gold-gradient mx-auto rounded-full" />
+          </div>
+
           {/* Bottom Row: Next 2 Keynotes */}
           <div className="flex flex-col md:flex-row items-start justify-center gap-10 md:gap-12 lg:gap-16 max-w-3xl w-full">
             {speakersData.slice(3, 5).map((speaker, i) => (
