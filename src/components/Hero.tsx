@@ -3,6 +3,8 @@ import { CalendarDays, MapPin } from "lucide-react";
 import jackRichards from "@/assets/jack-richards.jpeg";
 import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
+import newSpeaker1 from "@/assets/speaker-4.jpg";
+import newSpeaker2 from "@/assets/speaker-5.jpg";
 import { useEffect, useState } from "react";
 import ParticleBackground from "./ParticleBackground";
 
@@ -153,35 +155,59 @@ const Hero = () => {
             Keynote Speakers
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-14">
-            {/* International Keynotes */}
-            <div className="flex flex-col items-center text-center">
-              <div className="relative flex justify-center">
-                <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
-                <img src={kevinMcManus} alt="Kevin McManus" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+          <div className="flex flex-col gap-10 md:gap-14 items-center w-full">
+            {/* Top Row: Original 3 Keynotes */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-14 max-w-5xl mx-auto w-full">
+              {/* International Keynotes */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex justify-center">
+                  <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                  <img src={kevinMcManus} alt="Kevin McManus" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                </div>
+                <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Kevin McManus</p>
+                <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Ph.D., Professor of Linguistics, University of Pittsburgh</p>
               </div>
-              <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Kevin McManus</p>
-              <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Ph.D., Professor of Linguistics, University of Pittsburgh</p>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex justify-center">
+                  <div className="absolute z-0" style={{ width: 280, height: 280, top: -20, right: "calc(50% - 170px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                  <img src={jackRichards} alt="Jack C. Richards" className="relative z-10 w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] rounded-full object-cover shadow-lg shadow-black/25" />
+                </div>
+                <p className="text-primary-foreground font-serif text-xl sm:text-2xl mt-3 mb-1">Jack C. Richards</p>
+                <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[220px]">Internationally Acclaimed Scholar in Applied Linguistics</p>
+              </div>
+
+
+              {/* National Keynote */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex justify-center">
+                  <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                  <img src={mohammedDahbi} alt="Mohammed Dahbi" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                </div>
+                <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Mohammed Dahbi</p>
+                <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Professor Emeritus, Al Akhawayn University in Ifrane</p>
+              </div>
             </div>
 
-            <div className="flex flex-col items-center text-center">
-              <div className="relative flex justify-center">
-                <div className="absolute z-0" style={{ width: 280, height: 280, top: -20, right: "calc(50% - 170px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
-                <img src={jackRichards} alt="Jack C. Richards" className="relative z-10 w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] rounded-full object-cover shadow-lg shadow-black/25" />
+            {/* Bottom Row: Added Keynotes */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-14 max-w-3xl mx-auto w-full">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex justify-center">
+                  <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                  <img src={newSpeaker1} alt="Imane Nejjar" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover object-top shadow-lg shadow-black/25" />
+                </div>
+                <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Imane Nejjar</p>
+                <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Professor of Education, Mohamed V University</p>
               </div>
-              <p className="text-primary-foreground font-serif text-xl sm:text-2xl mt-3 mb-1">Jack C. Richards</p>
-              <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[220px]">Internationally Acclaimed Scholar in Applied Linguistics</p>
-            </div>
 
-
-            {/* National Keynote */}
-            <div className="flex flex-col items-center text-center">
-              <div className="relative flex justify-center">
-                <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
-                <img src={mohammedDahbi} alt="Mohammed Dahbi" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex justify-center">
+                  <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                  <img src={newSpeaker2} alt="Josephine Clark Kennedy" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                </div>
+                <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Josephine Clark Kennedy</p>
+                <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Deputy Vice President, Amideast</p>
               </div>
-              <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Mohammed Dahbi</p>
-              <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Professor Emeritus, Al Akhawayn University in Ifrane</p>
             </div>
           </div>
         </motion.div>
