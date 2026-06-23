@@ -6,6 +6,8 @@ import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
 import newSpeaker1 from "@/assets/speaker-4.jpg";
 import newSpeaker2 from "@/assets/speaker-5.jpg";
+import matthewCannella from "@/assets/matthew-cannella.jpg";
+import haniHussein from "@/assets/hani-hussein.jpg";
 
 interface SpeakerCardProps {
   image: string;
@@ -119,7 +121,21 @@ const speakersData = [
     name: "Josephine Clark Kennedy",
     label: "International Featured Speaker",
     subtitle: "Deputy Vice President for English Language and Teacher Development Programs, Amideast",
-    bio: "Josephine Clark Kennedy is Deputy Vice President for English Language and Teacher Development Programs at Amideast, where she leads the organization’s strategy, strategic growth, and technical direction for English language learning and teacher development programs across the Middle East and North Africa and beyond. She oversees initiatives related to English language education, teacher professional development, curriculum and assessment design, instructional design and digital learning, and institutional partnerships.\n\nMs. Kennedy brings more than 25 years of international experience in TESOL, education leadership, and workforce and youth development. Since joining Amideast in 2021 as Regional Director for English Language Programs, she has led regional strategy, program quality, and large-scale K–12 and higher education initiatives across multiple country offices. Prior to Amideast, she held senior leadership roles with World Learning and SIT Graduate Institute, including Divisional Vice President for Global Education and Development, where she oversaw education and teacher development programs across more than 20 country offices and supported online learning initiatives reaching participants in approximately 170 countries.\n\nThroughout her career, Ms. Kennedy has led large-scale education reform, teacher training, and English language initiatives funded by organizations including USAID, the U.S. Department of State, UNICEF, and the World Bank. Her work has focused on communicative language teaching, literacy, inclusive education, curriculum reform, teacher professional development, and systems strengthening across diverse educational contexts.\n\nA recognized leader in the TESOL field, Ms. Kennedy is a past President and Conference Chair of TESOL Arabia and has served in leadership roles with TESOL International Association and other professional organizations.\n\nMs. Kennedy holds a Master of Arts in Teaching from SIT Graduate Institute and pursued doctoral studies in TESOL Education at the University of Exeter in the United Kingdom.",
+    bio: "Josephine Clark Kennedy is Deputy Vice President for English Language and Teacher Development Programs at Amideast, where she leads the organization's strategy, strategic growth, and technical direction for English language learning and teacher development programs across the Middle East and North Africa and beyond. She oversees initiatives related to English language education, teacher professional development, curriculum and assessment design, instructional design and digital learning, and institutional partnerships.\n\nMs. Kennedy brings more than 25 years of international experience in TESOL, education leadership, and workforce and youth development. Since joining Amideast in 2021 as Regional Director for English Language Programs, she has led regional strategy, program quality, and large-scale K–12 and higher education initiatives across multiple country offices. Prior to Amideast, she held senior leadership roles with World Learning and SIT Graduate Institute, including Divisional Vice President for Global Education and Development, where she oversaw education and teacher development programs across more than 20 country offices and supported online learning initiatives reaching participants in approximately 170 countries.\n\nThroughout her career, Ms. Kennedy has led large-scale education reform, teacher training, and English language initiatives funded by organizations including USAID, the U.S. Department of State, UNICEF, and the World Bank. Her work has focused on communicative language teaching, literacy, inclusive education, curriculum reform, teacher professional development, and systems strengthening across diverse educational contexts.\n\nA recognized leader in the TESOL field, Ms. Kennedy is a past President and Conference Chair of TESOL Arabia and has served in leadership roles with TESOL International Association and other professional organizations.\n\nMs. Kennedy holds a Master of Arts in Teaching from SIT Graduate Institute and pursued doctoral studies in TESOL Education at the University of Exeter in the United Kingdom.",
+  },
+  {
+    image: matthewCannella,
+    name: "Matthew Cannella",
+    label: "International Featured Speaker",
+    subtitle: "RELO, U.S. Embassy in Rabat",
+    bio: "Dr. Matthew Cannella is an international education and English language specialist representing the Bureau of Educational and Cultural Affairs (ECA) at the U.S. Department of State. He specializes in Applied Linguistics and English Language Teaching (ELT), with a specific focus on the intersection of education and Artificial Intelligence. He regularly collaborates with global educational organizations and embassies to provide professional development, promote cross-cultural exchange, and explore topics like the role of inclusive AI in language education.",
+  },
+  {
+    image: haniHussein,
+    name: "Dr. Hani Hussein",
+    label: "International Featured Speaker",
+    subtitle: "Professor of Rhetorical Writing and Research Skills, Applied Linguist",
+    bio: "Dr. Hani Hussein is a highly qualified applied linguist and Professor of Rhetorical Writing and Research skills with extensive experience in higher education across institutions such as Sultan Qaboos University and King Saud University. Holding a PhD in Applied Linguistics, an MA TESOL from University of Sunderland, and professional certifications including Cambridge Assessment English DELTA and CELTA, he demonstrates strong expertise in English language teaching, curriculum design, and assessment development.\n\nHis work spans teaching academic and exam-focused courses, leading assessment coordination, and delivering teacher training and international conference presentations. With a strong commitment to professional development, he actively mentors teachers, designs DELTA training programs, and engages in classroom-based research.\n\nHis research interests focus on language testing and assessment, particularly automated writing evaluation using AI and NLP, as well as second language acquisition, reflecting a forward-looking approach to innovation in ELT and higher education.",
   },
 ];
 
@@ -153,9 +169,9 @@ const KeynoteSpeaker = () => (
             <div className="w-16 h-1 gold-gradient mx-auto rounded-full" />
           </div>
 
-          {/* Bottom Row: Next 2 Keynotes */}
-          <div className="flex flex-col md:flex-row items-start justify-center gap-10 md:gap-12 lg:gap-16 max-w-3xl w-full">
-            {speakersData.slice(3, 5).map((speaker, i) => (
+          {/* Bottom Row: Featured Speakers */}
+          <div className="flex flex-col md:flex-row flex-wrap items-start justify-center gap-10 md:gap-12 lg:gap-16 max-w-5xl w-full">
+            {speakersData.slice(3).map((speaker, i) => (
               <SpeakerCard key={speaker.name} {...speaker} />
             ))}
           </div>

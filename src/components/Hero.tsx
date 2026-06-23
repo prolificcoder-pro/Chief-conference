@@ -5,6 +5,8 @@ import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
 import newSpeaker1 from "@/assets/speaker-4.jpg";
 import newSpeaker2 from "@/assets/speaker-5.jpg";
+import matthewCannella from "@/assets/matthew-cannella.jpg";
+import haniHussein from "@/assets/hani-hussein.jpg";
 import { useEffect, useState } from "react";
 import ParticleBackground from "./ParticleBackground";
 
@@ -197,7 +199,7 @@ const Hero = () => {
               <p className="text-accent font-body uppercase tracking-[0.3em] text-xs font-light">
                 Featured Speakers
               </p>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-14 max-w-3xl mx-auto w-full">
+              <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 md:gap-10 lg:gap-14 max-w-5xl mx-auto w-full">
 
                 {/* Imane Nejjar */}
                 <div className="flex flex-col items-center text-center">
@@ -219,6 +221,26 @@ const Hero = () => {
                   <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Deputy Vice President, Amideast</p>
                 </div>
 
+                {/* Matthew Cannella */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex justify-center">
+                    <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                    <img src={matthewCannella} alt="Matthew Cannella" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                  </div>
+                  <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Matthew Cannella</p>
+                  <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">RELO, U.S. Embassy in Rabat</p>
+                </div>
+
+                {/* Dr. Hani Hussein */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex justify-center">
+                    <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
+                    <img src={haniHussein} alt="Dr. Hani Hussein" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                  </div>
+                  <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Dr. Hani Hussein</p>
+                  <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Professor & Applied Linguist</p>
+                </div>
+
               </div>
             </div>
 
@@ -230,15 +252,29 @@ const Hero = () => {
             Abstract submissions are now closed. Accepted presenters may submit their final presentation materials, while attendees may obtain a Conference Participation Pass for networking breaks and an attendance certificate.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6 sm:gap-6 w-full max-w-3xl mx-auto">
-            <div className="flex flex-col items-center gap-2 w-full sm:w-[280px]">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScYfeDo02bjuecbCFPPPpwaPqAU91ETJwJEAZ5o0NJWeDJCqw/viewform" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full gold-gradient text-accent-foreground font-semibold px-4 py-3 rounded-full text-base hover:opacity-90 transition-opacity shadow-lg text-center min-h-[56px] leading-snug">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 w-full max-w-4xl mx-auto">
+            <div className="flex flex-col items-center gap-2 w-full sm:w-[240px]">
+              <a 
+                href="/conference-programme.pdf" 
+                download="Conference-Programme.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full gold-gradient text-accent-foreground font-bold px-4 py-3 rounded-full text-base hover:opacity-90 transition-all duration-300 shadow-[0_0_15px_hsl(var(--accent)/0.35)] hover:shadow-[0_0_25px_hsl(var(--accent)/0.55)] text-center min-h-[56px] leading-snug"
+              >
+                Download Program PDF
+              </a>
+              <span className="text-primary-foreground/60 text-xs font-body italic text-center">
+                Or <a href="#program" className="underline hover:text-accent transition-all duration-350">view interactive schedule</a>
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-2 w-full sm:w-[240px]">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScYfeDo02bjuecbCFPPPpwaPqAU91ETJwJEAZ5o0NJWeDJCqw/viewform" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full border-2 border-accent/80 text-accent font-semibold px-4 py-3 rounded-full text-base hover:bg-accent/10 transition-colors text-center min-h-[56px] leading-snug">
                 Submit Final Presentation
               </a>
               <span className="text-primary-foreground/60 text-xs font-body italic text-center">For accepted presenters only</span>
             </div>
-            <div className="flex flex-col items-center gap-2 w-full sm:w-[280px]">
-              <a href="https://forms.gle/CHWu6Zx8R3teRpEM7" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full border-2 border-accent text-accent font-semibold px-4 py-3 rounded-full text-base hover:bg-accent/10 transition-colors text-center min-h-[56px] leading-snug">
+            <div className="flex flex-col items-center gap-2 w-full sm:w-[240px]">
+              <a href="https://forms.gle/CHWu6Zx8R3teRpEM7" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full border-2 border-accent/80 text-accent font-semibold px-4 py-3 rounded-full text-base hover:bg-accent/10 transition-colors text-center min-h-[56px] leading-snug">
                 Conference Attendance Pass
               </a>
               <span className="text-primary-foreground/60 text-xs font-body italic text-center">Paid option for attendees</span>
