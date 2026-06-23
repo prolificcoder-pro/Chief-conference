@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 const sections = [
   { id: "home", label: "Home" },
   { id: "keynote-speaker", label: "Keynote Speakers" },
-  { id: "program", label: "Conference Program" },
   { id: "important-dates", label: "Important Dates" },
   { id: "call-for-papers", label: "Call for Papers" },
   { id: "streams", label: "Conference Streams" },

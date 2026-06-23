@@ -3,7 +3,6 @@ import FacebookMockup from "@/components/FacebookMockup";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import KeynoteSpeaker from "@/components/KeynoteSpeaker";
-import Program from "@/components/Program";
 import Streams from "@/components/Streams";
 import CallForPapers from "@/components/CallForPapers";
 import ImportantDates from "@/components/ImportantDates";
@@ -24,7 +23,6 @@ const Index = () => (
     <RabatSlider />
     <About />
     <KeynoteSpeaker />
-    <Program />
     <ImportantDates />
     <CallForPapers />
     <Streams />

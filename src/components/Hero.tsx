@@ -124,19 +124,16 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        <motion.h1 className="text-primary-foreground text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 max-w-5xl mx-auto md:text-5xl" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-
+        <motion.p className="text-primary-foreground/80 text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed mb-6 max-w-3xl mx-auto" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           Applied Linguistics and English Language Teaching{" "}
           <span className="italic font-medium">&</span> Learning
-        </motion.h1>
+        </motion.p>
 
         <motion.div className="w-24 h-1 gold-gradient mx-auto rounded-full mb-8" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.6, delay: 0.6 }} />
 
-
-        <motion.p className="text-primary-foreground/80 font-serif italic max-w-3xl mx-auto mb-10 md:text-2xl text-2xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}>
-
+        <motion.h1 className="text-primary-foreground text-3xl sm:text-4xl lg:text-6xl font-bold font-serif italic leading-tight max-w-5xl mx-auto mb-10" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
           "Converging Disciplines, Evolving Classrooms: Applied Linguistics and ELT in Context"
-        </motion.p>
+        </motion.h1>
 
         <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-primary-foreground/90 font-body" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}>
 
@@ -264,7 +261,7 @@ const Hero = () => {
                 Download Program PDF
               </a>
               <span className="text-primary-foreground/60 text-xs font-body italic text-center">
-                Or <a href="#program" className="underline hover:text-accent transition-all duration-350">view interactive schedule</a>
+                Get the complete schedule
               </span>
             </div>
             <div className="flex flex-col items-center gap-2 w-full sm:w-[240px]">
