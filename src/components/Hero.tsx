@@ -5,7 +5,7 @@ import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
 import newSpeaker1 from "@/assets/speaker-4.jpg";
 import newSpeaker2 from "@/assets/speaker-5.jpg";
-import matthewCannella from "@/assets/matthew-cannella.jpg";
+import reloLogo from "@/assets/relo-logo.jpg";
 import haniHussein from "@/assets/hani-hussein.jpg";
 import { useEffect, useState } from "react";
 import ParticleBackground from "./ParticleBackground";
@@ -222,7 +222,7 @@ const Hero = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative flex justify-center">
                     <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
-                    <img src={matthewCannella} alt="Matthew Cannella" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-cover shadow-lg shadow-black/25" />
+                    <img src={reloLogo} alt="Matthew Cannella" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-contain bg-white shadow-lg shadow-black/25" />
                   </div>
                   <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Matthew Cannella</p>
                   <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">RELO, U.S. Embassy in Rabat</p>
