@@ -6,7 +6,6 @@ import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
 import newSpeaker1 from "@/assets/speaker-4.jpg";
 import newSpeaker2 from "@/assets/speaker-5.jpg";
-import reloLogo from "@/assets/relo-logo.jpg";
 import haniHussein from "@/assets/hani-hussein.jpg";
 
 interface SpeakerCardProps {
@@ -122,14 +121,6 @@ const speakersData = [
     label: "International Featured Speaker",
     subtitle: "Deputy Vice President for English Language and Teacher Development Programs, Amideast",
     bio: "Josephine Clark Kennedy is Deputy Vice President for English Language and Teacher Development Programs at Amideast, where she leads the organization's strategy, strategic growth, and technical direction for English language learning and teacher development programs across the Middle East and North Africa and beyond. She oversees initiatives related to English language education, teacher professional development, curriculum and assessment design, instructional design and digital learning, and institutional partnerships.\n\nMs. Kennedy brings more than 25 years of international experience in TESOL, education leadership, and workforce and youth development. Since joining Amideast in 2021 as Regional Director for English Language Programs, she has led regional strategy, program quality, and large-scale K–12 and higher education initiatives across multiple country offices. Prior to Amideast, she held senior leadership roles with World Learning and SIT Graduate Institute, including Divisional Vice President for Global Education and Development, where she oversaw education and teacher development programs across more than 20 country offices and supported online learning initiatives reaching participants in approximately 170 countries.\n\nThroughout her career, Ms. Kennedy has led large-scale education reform, teacher training, and English language initiatives funded by organizations including USAID, the U.S. Department of State, UNICEF, and the World Bank. Her work has focused on communicative language teaching, literacy, inclusive education, curriculum reform, teacher professional development, and systems strengthening across diverse educational contexts.\n\nA recognized leader in the TESOL field, Ms. Kennedy is a past President and Conference Chair of TESOL Arabia and has served in leadership roles with TESOL International Association and other professional organizations.\n\nMs. Kennedy holds a Master of Arts in Teaching from SIT Graduate Institute and pursued doctoral studies in TESOL Education at the University of Exeter in the United Kingdom.",
-  },
-  {
-    image: reloLogo,
-    name: "Matthew Cannella",
-    label: "International Featured Speaker",
-    subtitle: "RELO, U.S. Embassy in Rabat",
-    bio: "Dr. Matthew Cannella is an international education and English language specialist representing the Bureau of Educational and Cultural Affairs (ECA) at the U.S. Department of State. He specializes in Applied Linguistics and English Language Teaching (ELT), with a specific focus on the intersection of education and Artificial Intelligence. He regularly collaborates with global educational organizations and embassies to provide professional development, promote cross-cultural exchange, and explore topics like the role of inclusive AI in language education.",
-    imageClassName: "object-contain bg-white",
   },
   {
     image: haniHussein,

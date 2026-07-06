@@ -3,6 +3,7 @@ import FacebookMockup from "@/components/FacebookMockup";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import KeynoteSpeaker from "@/components/KeynoteSpeaker";
+import Testimonials from "@/components/Testimonials";
 import Streams from "@/components/Streams";
 import CallForPapers from "@/components/CallForPapers";
 import ImportantDates from "@/components/ImportantDates";
@@ -12,13 +13,11 @@ import Contact from "@/components/Contact";
 import MapSection from "@/components/MapSection";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
-import MobileNav from "@/components/MobileNav";
 import OnsiteNotice from "@/components/OnsiteNotice";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
   <main>
-    <MobileNav />
     <Hero />
     <RabatSlider />
     <About />
@@ -29,6 +28,7 @@ const Index = () => (
     <Registration />
     <Committees />
     <Contact />
+    <Testimonials />
     <Partners />
     <FacebookMockup />
     <MapSection />

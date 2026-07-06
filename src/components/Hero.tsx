@@ -5,10 +5,10 @@ import kevinMcManus from "@/assets/kevin-macmanus.jpeg";
 import mohammedDahbi from "@/assets/mohammed-dahbi.png";
 import newSpeaker1 from "@/assets/speaker-4.jpg";
 import newSpeaker2 from "@/assets/speaker-5.jpg";
-import reloLogo from "@/assets/relo-logo.jpg";
 import haniHussein from "@/assets/hani-hussein.jpg";
 import { useEffect, useState } from "react";
 import ParticleBackground from "./ParticleBackground";
+import TopMenu from "./TopMenu";
 
 const CONFERENCE_DATE = new Date("2026-06-24T09:00:00");
 function useCountdown(target: Date) {
@@ -62,31 +62,9 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full border border-white/15" />
       </div>
 
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center w-full px-4">
-        <motion.div 
-          className="flex flex-col items-center justify-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <div className="flex items-center gap-4 mb-3">
-            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-white/30"></div>
-            <span className="text-primary-foreground/70 text-[9px] sm:text-[10px] font-bold tracking-[0.4em] uppercase drop-shadow-md">
-              Official Host
-            </span>
-            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-white/30"></div>
-          </div>
-          
-          <div className="relative group">
-            <div className="absolute -inset-2 bg-white/5 rounded-xl blur-lg group-hover:bg-white/10 transition-all duration-500" />
-            <img 
-              src="/mwn-logo.svg" 
-              alt="Morocco World News Logo" 
-              className="relative z-10 h-10 sm:h-14 w-auto object-contain rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.5)] border border-white/10 group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </motion.div>
-      </div>
+      <TopMenu />
+
+
 
       <div className="relative z-10 container mx-auto px-6 text-center mt-16 sm:mt-12">
         <motion.div
@@ -218,15 +196,6 @@ const Hero = () => {
                   <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">Deputy Vice President, Amideast</p>
                 </div>
 
-                {/* Matthew Cannella */}
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative flex justify-center">
-                    <div className="absolute z-0" style={{ width: 200, height: 200, top: -14, right: "calc(50% - 120px)", backgroundImage: "radial-gradient(circle, hsl(220 45% 60% / 0.14) 1.5px, transparent 1.5px)", backgroundSize: "14px 14px", maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 80%)" }} />
-                    <img src={reloLogo} alt="Matthew Cannella" className="relative z-10 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] rounded-full object-contain bg-white shadow-lg shadow-black/25" />
-                  </div>
-                  <p className="text-primary-foreground font-serif text-lg sm:text-xl mt-3 mb-1">Matthew Cannella</p>
-                  <p className="text-primary-foreground/50 font-body text-xs leading-relaxed max-w-[200px]">RELO, U.S. Embassy in Rabat</p>
-                </div>
 
                 {/* Dr. Hani Hussein */}
                 <div className="flex flex-col items-center text-center">
